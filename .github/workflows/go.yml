@@ -19,7 +19,13 @@ jobs:
         go-version: 1.15
 
     - name: Check code formatting
-      uses: Jerome1337/gofmt-action@v1.0.4
+      run: |
+        GOFMT_OUTPUT="$(gofmt -l `find ./ -name '*.go' | grep -v vendor` 2>&1)"
+        if [ -n "$GOFMT_OUTPUT" ]; then
+          echo "The following files are not correctly formatted:"
+          echo "${GOFMT_OUTPUT}"
+          exit 1
+        fi
 
     - name: Run Tests
       run: go test -v ./...
