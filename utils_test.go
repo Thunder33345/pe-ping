@@ -123,7 +123,7 @@ func TestParseResponse_responseLength(t *testing.T) {
 	}
 }
 func TestParseResponse_mock(t *testing.T) {
-	for i := 1; i < 50; i++ {
+	for i := 1; i < 25; i++ {
 		t.Run(fmt.Sprintf("Mock Test %0d", i), func(t *testing.T) {
 			a := assert.New(t)
 			in, out := mockResponseAndInput()
