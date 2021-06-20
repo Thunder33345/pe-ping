@@ -19,7 +19,7 @@ type Response struct {
 	ServerID     string //probably int
 	LanText      string
 	GameModeName string
-	GameModeId   string //probably int
+	GameModeID   string //probably int
 	PortV4       string //probably int
 	PortV6       string //probably int
 	//Extra is where the remainder of the splits goes in, if any

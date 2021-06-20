@@ -151,7 +151,7 @@ func mockResponseAndInput() (input string, output Response) {
 	input, output.ServerID = addRandString(input)
 	input, output.LanText = addRandString(input)
 	input, output.GameModeName = addRandString(input)
-	input, output.GameModeId = addRandString(input)
+	input, output.GameModeID = addRandString(input)
 	input, output.PortV4 = addRandString(input)
 	input, output.PortV6 = addRandString(input)
 	e := randString(10) + ";" + randString(10) + ";"

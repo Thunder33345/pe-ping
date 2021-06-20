@@ -42,7 +42,7 @@ func ParseResponse(b []byte, req DataRequirement) (Response, error) {
 	resp.ServerID = readSlice(sp, 5)
 	resp.LanText = readSlice(sp, 6)
 	resp.GameModeName = readSlice(sp, 7)
-	resp.GameModeId = readSlice(sp, 8)
+	resp.GameModeID = readSlice(sp, 8)
 	resp.PortV4 = readSlice(sp, 9)
 	resp.PortV6 = readSlice(sp, 10)
 	resp.Extra = readSlice(sp, 11)
